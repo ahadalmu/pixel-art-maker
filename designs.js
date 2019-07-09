@@ -1,8 +1,8 @@
 const submit = document.getElementById("submit");
 const table = document.getElementById("pixelCanvas");
 // Select size input
-const height = document.getElementById("inputHeight").Value;
-const width = document.getElementById("inputWidth").Value;
+const height = document.getElementById("inputHeight").value;
+const width = document.getElementById("inputWidth").value;
 // When size is submitted by the user, call makeGrid()
 function makeGrid(event) {
     // Your code goes here!
