@@ -14,7 +14,7 @@ function makeGrid(event) {
             const cell = document.createElement("td");
             cell.addEventListener('click', function (event2) {
                 // Select color input
-                const color = document.getElementById("colorPicker").Value;
+                const color = document.getElementById("colorPicker").value;
                 event2.target.style.backgroundColor = color;
             });
             tRow.appendChild(cell);
