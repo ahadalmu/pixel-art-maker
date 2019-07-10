@@ -1,16 +1,16 @@
 const submit = document.getElementById("submit");
-const table = document.getElementById("pixelCanvas");
+const pixelCanvas = document.getElementById("pixelCanvas");
 // Select size input
-const height = document.getElementById("inputHeight").value;
-const width = document.getElementById("inputWidth").value;
 // When size is submitted by the user, call makeGrid()
 function makeGrid(event) {
     // Your code goes here!
     event.preventDefault();
-    table.innerHTML = "";
-    for (var i = 0; i < height; i++) {
+    pixelCanvas.innerHTML = "";
+    const height = document.getElementById("inputHeight").value;
+    const width = document.getElementById("inputWidth").value;
+    for (let i = 0; i < height; i++) {
         const tRow = document.createElement("tr");
-        for (var j = 0; j < width; j++) {
+        for (let j = 0; j < width; j++) {
             const cell = document.createElement("td");
             cell.addEventListener('click', function (event2) {
                 // Select color input
@@ -19,7 +19,7 @@ function makeGrid(event) {
             });
             tRow.appendChild(cell);
         }
-        table.appendChild(tRow);
+        pixelCanvas.appendChild(tRow);
     }
 }
 submit.addEventListener('click', makeGrid);
